@@ -1,0 +1,1 @@
+python main.py --config_file ./configs/RPG.json --config_idx {1}
