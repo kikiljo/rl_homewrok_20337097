@@ -1,0 +1,56 @@
+{
+  "env": {
+    "name": "LunarLander-v2",
+    "max_episode_steps": 1000,
+    "input_type": "feature"
+  },
+  "agent": {
+    "name": "DDQN"
+  },
+  "train_steps": 1500000.0,
+  "test_per_episodes": -1,
+  "device": "cpu",
+  "hidden_layers": [
+    64,
+    64
+  ],
+  "memory_type": "FiniteReplay",
+  "memory_size": 10000.0,
+  "exploration_type": "LinearEpsilonGreedy",
+  "exploration_steps": 1000.0,
+  "epsilon_steps": 1000.0,
+  "epsilon_start": 1.0,
+  "epsilon_end": 0.01,
+  "epsilon_decay": 0.999,
+  "loss": "MSELoss",
+  "optimizer": {
+    "name": "RMSprop",
+    "kwargs": {
+      "lr": 0.003
+    }
+  },
+  "batch_size": 32,
+  "display_interval": 100,
+  "rolling_score_window": {
+    "Train": 100,
+    "Test": 10
+  },
+  "discount": 0.99,
+  "seed": 419731,
+  "show_tb": false,
+  "gradient_clip": 5,
+  "target_network_update_steps": 200,
+  "network_update_steps": 1,
+  "generate_random_seed": true,
+  "config_idx": 2,
+  "num_combinations": 90,
+  "render": false,
+  "hidden_act": "ReLU",
+  "output_act": "Linear",
+  "exp": "Maxmin_lunar",
+  "logs_dir": "./logs/Maxmin_lunar/2/",
+  "train_log_path": "./logs/Maxmin_lunar/2/result_Train.feather",
+  "test_log_path": "./logs/Maxmin_lunar/2/result_Test.feather",
+  "model_path": "./logs/Maxmin_lunar/2/model.pt",
+  "cfg_path": "./logs/Maxmin_lunar/2/config.json"
+}
